@@ -15,11 +15,6 @@ export class CharacterListComponent implements OnInit {
   
   ngOnInit(): void {
     this.characters$ = this.characterService.getAllCharacters();
-
-    this.characters$.subscribe({
-      next: (characteres) => console.log('Personagens:', characteres),
-      error: (error) => console.error('Erro ao carregar personagens:', error)
-    });
   }
 
 }

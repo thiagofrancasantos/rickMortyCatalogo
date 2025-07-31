@@ -1,88 +1,28 @@
 <div class="container">
     <div class="container-card">
-        <article class="character-card">
-            <div class="character-card-image">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.SoWNPrvSGX99TIqJYCqMcAHaJs?pid=Api&P=0&h=180" alt="imagem corinthians">
-            </div>
-            <div class="character-card-content">
-                <div class="section-title">
-                    <a href="https://rickandmortyapi.com/api/character/226"><h2>Corinthians my life</h2></a>
-                    <span class="status-content">
-                        <span class="status-icon"></span>
-                        Alive
-                         - 
-                        Human
-                    </span>
-                </div>
-                <div class="section-location">
-                    <span class="text-gray">Last known location:</span>
-                    <a href="https://rickandmortyapi.com/api/location/1">Earth (C-137)</a>
-                </div>
-            </div>
-        </article>
+        <ng-container *ngIf="characters$ | async as characters">
 
+            <article class="character-card" *ngFor="let character of characters">
+                <div class="character-card-image">
+                    <img [src]="character.imageUrl" [title]="character.name"/>
+                </div>
+                <div class="character-card-content">
+                    <div class="section-title">
+                        <a><h2>{{ character.name }}</h2></a>
+                        <span class="status-content">
+                            <span class="status-icon"></span>
+                            {{ character.status }}
+                             - 
+                            {{ character.species }}
+                        </span>
+                    </div>
+                    <div class="section-location">
+                        <span class="text-gray">Last known location:</span>
+                        <a>{{ character.locationName }}</a>
+                    </div>
+                </div>
+            </article>
+        </ng-container>
 
-        <article class="character-card">
-            <div class="character-card-image">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.SoWNPrvSGX99TIqJYCqMcAHaJs?pid=Api&P=0&h=180" alt="imagem corinthians">
-            </div>
-            <div class="character-card-content">
-                <div class="section-title">
-                    <a href="https://rickandmortyapi.com/api/character/226"><h2>Corinthians my life</h2></a>
-                    <span class="status-content">
-                        <span class="status-icon"></span>
-                        Alive
-                         - 
-                        Human
-                    </span>
-                </div>
-                <div class="section-location">
-                    <span class="text-gray">Last known location:</span>
-                    <a href="https://rickandmortyapi.com/api/location/1">Earth (C-137)</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="character-card">
-            <div class="character-card-image">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.SoWNPrvSGX99TIqJYCqMcAHaJs?pid=Api&P=0&h=180" alt="imagem corinthians">
-            </div>
-            <div class="character-card-content">
-                <div class="section-title">
-                    <a href="https://rickandmortyapi.com/api/character/226"><h2>Corinthians my life</h2></a>
-                    <span class="status-content">
-                        <span class="status-icon"></span>
-                        Alive
-                         - 
-                        Human
-                    </span>
-                </div>
-                <div class="section-location">
-                    <span class="text-gray">Last known location:</span>
-                    <a href="https://rickandmortyapi.com/api/location/1">Earth (C-137)</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="character-card">
-            <div class="character-card-image">
-                <img src="https://tse4.mm.bing.net/th/id/OIP.SoWNPrvSGX99TIqJYCqMcAHaJs?pid=Api&P=0&h=180" alt="imagem corinthians">
-            </div>
-            <div class="character-card-content">
-                <div class="section-title">
-                    <a href="https://rickandmortyapi.com/api/character/226"><h2>Corinthians my life</h2></a>
-                    <span class="status-content">
-                        <span class="status-icon"></span>
-                        Alive
-                         - 
-                        Human
-                    </span>
-                </div>
-                <div class="section-location">
-                    <span class="text-gray">Last known location:</span>
-                    <a href="https://rickandmortyapi.com/api/location/1">Earth (C-137)</a>
-                </div>
-            </div>
-        </article>
     </div>
 </div>

@@ -17,8 +17,8 @@
 }
 
 .character-card {
-    width: 500px;
-    height: 175px;
+    width: 550px;
+    height: 285px;
     display: flex;
     overflow: hidden;
     background: rgb(60, 62, 68);
