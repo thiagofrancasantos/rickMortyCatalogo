@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-secondary" style="height: 80px;">
   <div class="container">
-    <a class="navbar-brand" href="#">RickMorty Catalogo</a>
+<!--     <a><img src="../../../../assets/images/riickmortylogo.png" alt="rick_morty_logo" style="width: 100px; height: 70px;" class="bg-body-secondary"></a> -->
+    <a class="navbar-brand" [routerLink]="['']">RickMorty Catalogo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,9 +15,9 @@
             Categories
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['admin/categories']">Character</a></li>
+            <li><a class="dropdown-item" [routerLink]="['']">Character</a></li>
             <li><hr class="dropdown-divider"></li>
-             <li><a class="dropdown-item" [routerLink]="['admin/blogposts']">Location</a></li>
+             <li><a class="dropdown-item" [routerLink]="['location-list']">Location</a></li>
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>
         </li>
