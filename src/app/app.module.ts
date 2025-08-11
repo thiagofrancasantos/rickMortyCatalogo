@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { CharacterListComponent } from './feature/character/character-list/character-list.component';
 import { LocationListComponent } from './feature/location/location-list/location-list.component';
+import { CharacterCardComponent } from './feature/character/character-card/character-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CharacterListComponent,
-    LocationListComponent
+    LocationListComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,
