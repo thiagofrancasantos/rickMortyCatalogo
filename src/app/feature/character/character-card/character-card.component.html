@@ -1,0 +1,43 @@
+<div class="container" style="display: flex; justify-content: center; text-align: center;">
+    <div class="card-content">
+        <div class="card mb-3" style="max-width: 900px; height: 500px; margin-top: 30px;">
+          <div class="row g-0 h-100">
+            <div class="col-md-6 h-100">
+              <img [src]="model?.imageUrl" class="img-fluid rounded-start h-100" [title]="model?.name" alt="Character Image"
+                   style="object-fit: cover; width: 100%;">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body h-100" style="padding: 2rem;">
+                <h5 class="card-title" style="font-size: 2rem; margin-bottom: 2rem;">{{ model?.name}}</h5> <!-- Espaço abaixo do título -->
+                
+                <p class="card-text" style="font-size: 1.2rem; margin-bottom: 1.5rem;"> <!-- Espaço abaixo do texto -->
+                  <strong>Status</strong> - {{ model?.status }} 
+                </p>
+                
+                <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                  <strong>Gênero:</strong> {{ model?.gender }}
+                </p>
+                
+                <!-- Novo item com espaçamento -->
+                <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                  <strong>Espécie:</strong> {{ model?.species }}
+                </p>
+                
+                <!-- Outro novo item -->
+                <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                  <strong>Localização:</strong> {{ model?.locationName }}
+                </p>
+
+                <p class="card-text" style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                  <strong>Criação:</strong> {{ model?.created | date:'short' }} <!-- Formatação de data -->
+                </p>
+                
+                <p class="card-text">
+                  <small class="text-body-secondary" style="font-size: 1rem;">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
